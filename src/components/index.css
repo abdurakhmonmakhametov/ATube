@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.search-bar{
+    border: none;
+    outline: none;
+    width: 30vw;
+    background-color: transparent;
+    color: white;
+}
+
+.category-btn{
+    background-color: #272727 !important;
+    color: #fff !important;
+    font-weight: bold !important;
+    text-transform: capitalize;
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    padding: 8px 15px 6px;
+    transition: all 0.3s ease;
+}
+
+.selected{
+    background-color: #f1f1f1 !important;
+    color: #000 !important;
+}
+
+.category-btn:hover{
+    background-color: #373737 !important;
+}
+
+.react-player{
+    height: 70vh !important;
+    width: 100% !important;
+}
