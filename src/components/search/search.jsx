@@ -8,14 +8,12 @@ import { Videos } from '..';
 const Search = () => {
   const [videos, setVideos] = useState([]);
   const { id } = useParams();
-  console.log(id);
   
   useEffect(() => {
     const getDate = async() => {
       try {
         const data = await ApiService.fetching(`search?part=snippet&q=${id}`);
         setVideos(data.items)
-        console.log(data);
       } catch (error) {
         console.log(error);    
       }

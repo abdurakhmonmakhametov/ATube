@@ -49,8 +49,6 @@ const VideoDetail = () => {
 		}
 	  }, [videoDetail]);
 
-	  console.log(shortBoxHeight);
-
 	useEffect(() => {
 		const getData = async () => {
 			try {
@@ -84,7 +82,6 @@ const VideoDetail = () => {
 		},
 		statistics: { viewCount, likeCount, commentCount },
 	} = videoDetail;
-	console.log(contentHeight);
 	
 	const onToggleExpand = () => setIsExpanded(!isExpanded);
 

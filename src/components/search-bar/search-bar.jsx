@@ -10,7 +10,6 @@ const SearchBar = () => {
 	const [value, setValue] = useState('');
 	const submitHandler = (e) => {
 		e.preventDefault();
-		console.log(value);
 		if(value){
 			navigate(`/search/${value}`);
 		}

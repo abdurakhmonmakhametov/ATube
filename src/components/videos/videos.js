@@ -2,9 +2,7 @@ import { Box, Stack } from '@mui/material'
 import React from 'react'
 import { VideoCard, ChannelCard, Loader } from '../'
 
-const Videos = ({videos}) => {
-	console.log(videos);
-	
+const Videos = ({videos}) => {	
 	if (!videos?.length) return <Loader />
 	return (
 		<Stack

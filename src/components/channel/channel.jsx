@@ -15,10 +15,8 @@ const Channel = () => {
     const getData = async() => {
       try {
         const data = await ApiService.fetching(`channels?part=snippet&id=${id}`)
-        setChannelDetail(data.items[0])
-        console.log(data);
+        setChannelDetail(data.items[0]);
         const dataVideos = await ApiService.fetching(`search?channelId=${id}&part=snippet%2Cid&order=date&maxResults=50`)
-        console.log(dataVideos);
         setVideos(dataVideos?.items)
       } catch (err) {
         console.log(err);
@@ -27,8 +25,6 @@ const Channel = () => {
 
     getData()
   }, [id])
-
-  console.log(channelDetail);
   
 
   return (
