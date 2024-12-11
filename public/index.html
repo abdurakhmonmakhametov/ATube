@@ -2,42 +2,56 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <link rel="icon" href="%PUBLIC_URL%/logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
+    <!-- Meta description for SEO -->
+    <meta name="description"
+      content="Watch and share your favorite videos online. Explore a wide variety of content including tutorials, movies, music videos, and more on our video platform." />
+    <!-- Meta keywords for SEO -->
+    <meta name="keywords"
+      content="video platform, online videos, movie streaming, tutorial videos, music videos, video sharing, entertainment videos" />
+    <!-- Author of the website -->
+    <meta name="author" content="Abduraxmon Maxametov, https://github.com/AbduraxmonMaxametov, build only on learning goals" />
+    <!-- Open Graph meta tags for social media integration -->
+    <meta property="og:title" content="Watch and Share Videos - Your Video Platform" />
+    <meta property="og:description"
+      content="Explore a wide variety of videos, from entertainment to educational content, on our video platform. Share, watch, and engage with the community." />
+    <meta property="og:image" content="%PUBLIC_URL%/logo.png" />
+    <meta property="og:url" content="https://yourvideoplatform.com" />
+    <meta property="og:type" content="website" />
+    
+    <!-- Twitter Card meta tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Watch and Share Videos - Your Video Platform" />
+    <meta name="twitter:description"
+      content="Discover and share videos online. From movies to tutorials, enjoy the best of video content all in one place." />
+    <meta name="twitter:image" content="%PUBLIC_URL%/logo.png" />
+    <meta name="twitter:url" content="https://yourvideoplatform.com" />
+    
+    <!-- Optional: Add Google Structured Data for better visibility in search results -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "VideoObject",
+      "name": "ATube | Video Platform",
+      "url": "https://yourvideoplatform.com",
+      "description": "A leading platform to watch, share, and discover videos online. Enjoy content in various categories including entertainment, education, and more.",
+      "thumbnailUrl": "%PUBLIC_URL%/logo.png",
+      "contentUrl": "https://yourvideoplatform.com/videos",
+      "uploadDate": "2024-12-11"
+    }
+    </script>
+    
+    <style>
+      body::-webkit-scrollbar {
+        scrollbar-width: none;
+      }
+    </style>
+    <title>ATube | Video Platform</title>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
   </body>
 </html>

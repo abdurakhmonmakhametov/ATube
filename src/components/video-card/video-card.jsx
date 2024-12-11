@@ -1,9 +1,11 @@
-import React from 'react'
+// import React, { useEffect, useState } from 'react'
 import {Avatar,Card, CardContent, CardMedia, Typography, Stack} from '@mui/material'
 import { CheckCircle } from '@mui/icons-material'
 import { Link } from 'react-router-dom'
+// import { ApiService } from '../../service/api.service'
 
 const VideoCard = ({video}) => {
+  // const [channelImage, setChannelImage] = useState(null)
   const formatTimeAgo = (dateString) => {
     const date = new Date(dateString);
     const now = new Date();
@@ -28,13 +30,29 @@ const VideoCard = ({video}) => {
     return 'just now';
   }
 
+
+  // useEffect(() => {
+  //   const getData = async() => {
+  //     try {
+  //       const data = await ApiService.fetching(`channels?part=snippet&id=${video?.snippet?.channelId}`)
+  //       setChannelImage(data.items[0])
+  //     } catch (err) {
+  //       console.log(err);
+  //     }
+  //   }
+
+  //   getData()
+  // }, [video?.snippet?.channelId])
+
+
+
   return (
     <Link to={`/video/${video.id.videoId}`} style={{textDecoration: 'none'}}>
-      <Card sx={{ width: '320px', boxShadow: 'none', borderRadius: 0, backgroundColor: 'transparent'}}>
+      <Card sx={{ boxShadow: 'none', borderRadius: 0, backgroundColor: 'transparent'}}>
         <CardMedia
           image={video?.snippet?.thumbnails?.high?.url}
           alt={video?.snippet?.title}
-          sx={{ width: '360px', height: '180px' }}
+          sx={{ height: '180px', borderRadius: '10px' }}
         />
         <CardContent sx={{position: 'relative', height: '200px'}}>
           

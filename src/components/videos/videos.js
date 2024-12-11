@@ -9,8 +9,8 @@ const Videos = ({videos}) => {
 	return (
 		<Stack
 			Width={'100%'}
-			direction={'row'}
-			flexWrap={'wrap'}
+			display={'grid'}
+			gridTemplateColumns={'repeat(auto-fill, minmax(300px, 1fr))'}
 			justifyContent={'start'}
 			alignContent={'center'}
 			gap={2}

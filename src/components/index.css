@@ -42,4 +42,43 @@
 .react-player{
     height: 70vh !important;
     width: 100% !important;
+    border-radius: 10px !important;
+}
+
+.category{
+    overflow-x: auto;
+}
+
+.category::-webkit-scrollbar {
+    width: 3px;
+    height: 3px;
+  }
+
+.category::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+.category::-webkit-scrollbar-thumb {
+    background: #8a0917;
+  }
+  
+.category::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+
+@media (max-width: 900px) {
+    .react-player{
+        height: 50vh !important;
+    }
+
+    .category-btn:hover{
+        background-color: transparent !important;
+    }
+}
+
+@media (max-width: 600px) {
+    .react-player{
+        height: 40vh !important;
+    }
 }

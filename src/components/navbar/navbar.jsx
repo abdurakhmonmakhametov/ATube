@@ -16,11 +16,11 @@ const Navbar = () => {
 				top: 0,
 				zIndex: 100,
 				justifyContent: 'space-between',
-				backgroundColor: colors.secondary,
+				backgroundColor: colors.secondSecondary,
 			}}
 		>
 			<Link to={'/'} >
-        <img src={logo} alt='Logo' height={50}/>
+        <img src={logo} alt='Logo' height={40}/>
       </Link>
 			<SearchBar />
 			<Box sx={{ display: { sm: 'block', xs: 'none' } }}></Box>

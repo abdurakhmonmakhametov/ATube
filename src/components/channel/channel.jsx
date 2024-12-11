@@ -1,7 +1,7 @@
 import {useEffect , useState} from 'react'
 import {useParams} from 'react-router-dom'
 import {ApiService} from '../../service/api.service'
-import { Box, Container } from '@mui/material'
+import { Box, Container, Typography } from '@mui/material'
 import { ChannelCard } from '../'
 import { colors } from '../../constant/colors'
 import { Videos } from '../'
@@ -28,14 +28,17 @@ const Channel = () => {
     getData()
   }, [id])
 
+  console.log(channelDetail);
+  
 
   return (
     <Box minHeight={'90vh'} sx={{background: colors.secondary}}>
       <Box width={'100%'} display={'flex'} flexDirection={'column'} alignItems={'center'}>
-        <Box width={'100%'} height={'200px'} sx={{backgroundImage: `url(${channelDetail.brandingSettings?.image.bannerExternalUrl})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundPosition: 'center'}}></Box>
+        <Box width={'100%'} height={'200px'} sx={{backgroundImage: `url(${channelDetail?.brandingSettings?.image?.bannerExternalUrl || ''})`,
+         backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundPosition: 'center'}}></Box>
         <ChannelCard video={channelDetail} marginTop={'-100px'}/>
       </Box>
-      <Container maxWidth={'90%'} sx={{marginTop: '220px'}}>
+      <Container maxWidth={'90%'} sx={{marginTop: '150px'}}>
         <Videos videos={videos}/>
       </Container>
     </Box>
