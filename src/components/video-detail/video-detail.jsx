@@ -137,7 +137,7 @@ const VideoDetail = () => {
 						variant='subtitle1'
 						px={2}
 						pb={2}
-						sx={{ color: colors.textRed, opacity: 0.7, cursor: 'pointer', display: description === '' ? 'block' : 'none' }}
+						sx={{ color: colors.textRed, opacity: 0.7, cursor: 'pointer', display: description === '' ? 'none' : 'block' }}
 						onClick={onToggleExpand}
 					>{!isExpanded ? 'Show more' : 'Show less'}</Typography>
 					<Stack direction={'row'} gap={'20px'} alignItems={'center'} py={1} px={2} sx={{color: colors.textWhite}}>
